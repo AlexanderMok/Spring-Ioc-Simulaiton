@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="chinese" class="spring.beans.Chinese">
+		<property name="name" value="地球上的中国人"/>
+	</bean>
+
+	<bean id="english" class="spring.beans.English">
+		<property name="chinese" ref="chinese"/>
+	</bean>
+	
+	
+	<bean id="animal" class="spring.beans.Animal">
+		<property name="age" value="150"/>
+	</bean>
+	
+	<bean id="cat" class="spring.beans.Cat" scope="prototype">
+		<property name="blackCat" ref="blackCat"/>
+	</bean>
+	
+	<bean id="blackCat" class="spring.beans.BlackCat" scope="prototype">
+	</bean>
+	
+</beans>
